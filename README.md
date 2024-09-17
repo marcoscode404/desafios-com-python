@@ -1,5 +1,5 @@
 # desafios-com-python
 
-# EXTENSÔES
-python
-Ruff
+# EXTENSÔES:
+
+# PYTHON, RUFF
