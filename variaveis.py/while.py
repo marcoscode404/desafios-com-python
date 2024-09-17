@@ -1,0 +1,87 @@
+# While Loops
+# O while loop em Python é utilizado para iterar em cima de um bloco de código enquanto determinada Expressão de Teste (condição) for avaliada como True.
+
+# While é normalmente usado quando não sabemos de ante-mão o número de vezes no qual vamos iterar.
+
+# Python primeiro verifica a condição:
+
+# Se for False, o loop será encerrado e o controle será passado para a próxima instrução após o corpo do While Loop.
+# Se a condição for True, o corpo do While Loop será executado e a condição será verificada novamente.
+# Este procedimento continua enquanto a condição for True. Quando a condição se torna False, o loop termina e o controle é passado para a próxima instrução após o loop.
+
+# Estrutura Básica do While
+
+
+# while <condição>:
+#     <expressão>
+#     <expressão>
+#     ...
+# <condição> é avaliado para um booleano
+# Se a <condição> for True, executa-se todas as <expressões> dentro do bloco de código while
+# Checa a <condição> novamente
+# Repete até que a <condição> seja False
+# Vejamos um exemplo prático:
+
+i = 1
+while i < 10:
+    print(i)
+    i += 1
+# Observe que i += 1 é o mesmo que i = i + 1, precisamos dessa expressão, caso contrário teremos um loop infinito.
+
+# Também podemos definir o while loop em um único statement, da seguinte forma:
+
+count = 0
+while (count < 5): count += 1; print("Hello World")
+# A palavra-chave break também pode ser utilizada em conjunto com o while:
+
+a = 1
+while a < 10:
+    print(a)
+    if a == 5:
+        break
+    a += 1
+# Neste caso só serão impressos os números de 1 até 5, pois quando a == 5 o loop irá encerrar.
+
+# Podemos também usar a palavra-chave continue:
+
+x = 0
+while x < 10:
+    x += 1
+    if x == 5:
+        continue
+    print(x)
+# Neste caso o número 5 não será impresso, pois quando x == 5 o comando print() não será executado.
+
+# O while loop também pode ser usado para computarmos a Sequência de Fibonacci:
+
+n = int(input("Informe o número de termos: "))
+a, b = 0, 1
+count = 0
+while count < n:
+    print(a)
+    c = a + b
+    a, b = b, c
+    count += 1
+# Com ele podemos facilmente definir o algoritmo de Euclides para buscar o máximo divisor comum entre dois números:
+
+def gcd(x, y):
+    while y != 0:
+        (x, y) = (y, x % y)
+    return x
+print(gcd(155,70)) # 5
+print(gcd(77,33)) # 11
+print(gcd(400,140)) # 20
+print(gcd(97,13)) # 1
+
+
+
+# For vs While
+# for
+# Número de iterações é conhecido
+# Pode finalizar antecipadamente através do break
+# Utiliza um contador
+# while
+# Número de iterações ilimitados
+# Pode finalizar antecipadamente através do break
+# Pode utilizar um contador, porém é necessário inicializar ele antes do loop e incrementá-lo dentro do loop
+# Como vimos, while loops não são muito misteriosos, porém a utilidade deles pode ser muito grande em nossos programas!
