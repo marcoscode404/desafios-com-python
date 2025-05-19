@@ -12,4 +12,8 @@ for i in my_dicionary.items():
 # RETORNAR AS CHAVES
 print('----------------------KEYS-------------------------')
 for i in my_dicionary.keys():
-    print(i)
+    print(i) 
+
+
+keys = list(my_dicionary.keys())
+print(keys[0])
